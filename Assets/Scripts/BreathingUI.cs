@@ -26,11 +26,12 @@ public class BreathingUI : MonoBehaviour
    
     void Start()
     {
-        
-        completeTactic.Play();
+        //completeTactic.Play();
         currentStage = breatheStages.instruction;
-        Invoke("playInstructionVoiceover", 13);
-        Invoke("startRepetition", 14);
+        //Invoke("playInstructionVoiceover", 13);
+        instructionAudio.Play();
+        Invoke("startRepetition", 8);
+        //Invoke("startRepetition", 12);
     }
 
     void Update()
@@ -62,7 +63,7 @@ public class BreathingUI : MonoBehaviour
                 break;
             case breatheStages.completed:
                 Invoke("playFinalAudio", 15);
-                this.enabled = false;
+                gameObject.GetComponent<BreathingUI>().enabled = false;
                 break;
         }
     }

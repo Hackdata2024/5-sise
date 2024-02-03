@@ -22,6 +22,8 @@ public class ThreeTactic : MonoBehaviour
 
     private int touchObjectCount, soundObjectCount, smellObjectCount = 0;
 
+    private ThreeTacticFinish tacticFinish;
+
     public AudioSource selectObject;
     public AudioSource barrelSound;
     public AudioSource bottleSound;
@@ -32,6 +34,7 @@ public class ThreeTactic : MonoBehaviour
     public AudioSource complete;
     void Start()
     {
+        tacticFinish = GetComponent<ThreeTacticFinish>();
         currentStage = stage.Touch;
         intro.Play();
         Invoke("enableTouchObjects", 9);
@@ -85,6 +88,7 @@ public class ThreeTactic : MonoBehaviour
                     for (int i = 0; i < SmellObjects.Count; i++)
                     {
                         SmellObjects[i].transform.Find("UI").gameObject.SetActive(false);
+                        Debug.Log("disable UI");
                     }
                     
                     currentStage = stage.Finish;
@@ -95,7 +99,8 @@ public class ThreeTactic : MonoBehaviour
 
             case stage.Finish:
                 //complete.Play();
-                this.enabled = false;
+                tacticFinish.enabled = true;
+                gameObject.GetComponent<ThreeTactic>().enabled = false;
                 //enable next strategy script
                 //disable this script
                 break;
