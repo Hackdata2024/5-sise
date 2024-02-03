@@ -28,6 +28,9 @@ public class ThreeTactic : MonoBehaviour
     public AudioSource bottleSound;
     public AudioSource skeletonSound;
 
+    public AudioSource recognizeSounds;
+    public AudioSource recognizeSmells;
+    public AudioSource complete;
     void Start()
     {
         currentStage = stage.Touch;
@@ -48,7 +51,7 @@ public class ThreeTactic : MonoBehaviour
                     {
                         TouchObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
                     }
-
+                    recognizeSounds.Play();
                     currentStage = stage.Sound;
                 }
                 break;
@@ -67,7 +70,7 @@ public class ThreeTactic : MonoBehaviour
                     {
                         SoundObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
                     }
-
+                    recognizeSmells.Play();
                     currentStage = stage.Smell;
                 }
                 break;
@@ -85,12 +88,14 @@ public class ThreeTactic : MonoBehaviour
                     {
                         SmellObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
                     }
+                    
                     currentStage = stage.Finish;
                 }
 
                 break;
 
             case stage.Finish:
+                complete.Play();
                 deepBreathing.enabled = true;
                 this.enabled = false;
                 //enable next strategy script
