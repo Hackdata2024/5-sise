@@ -8,14 +8,38 @@ public class WaypointMovement : MonoBehaviour
     private int currentWaypoint = 0;
     public float delay = 4f;
 
+    public AudioSource shock;
+    public AudioSource que1_a;
+
+    public GameObject que1;
+
     void Start()
     {
         Invoke("StartMovement", delay);
+        que1.SetActive(false);
     }
 
     void StartMovement()
     {
         StartCoroutine(MoveToWaypoints());
+
+    }
+
+    public void Update()
+    {
+        if (currentWaypoint == waypoints.Length - 1)
+        {
+            shock.Play();
+            StartCoroutine(ActivateQue1WithDelay());
+        }
+    }
+
+    IEnumerator ActivateQue1WithDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        que1.SetActive(true);
+        que1_a.Play();
+
     }
 
     IEnumerator MoveToWaypoints()
