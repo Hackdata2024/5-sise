@@ -10,13 +10,24 @@ public class WaypointMovement : MonoBehaviour
 
     public AudioSource shock;
     public AudioSource que1_a;
+    public AudioSource que2_a;
+
 
     public GameObject que1;
+    public GameObject que2;
+
+    public GameObject checkmark_a;
+    public GameObject checkmark_b;
+
+
+
 
     void Start()
     {
         Invoke("StartMovement", delay);
         que1.SetActive(false);
+        que2.SetActive(false);
+
     }
 
     void StartMovement()
@@ -32,8 +43,30 @@ public class WaypointMovement : MonoBehaviour
             shock.Play();
             StartCoroutine(ActivateQue1WithDelay());
         }
+        if (checkmark_a.activeInHierarchy)
+        {
+            StartCoroutine(Newque());
+        }
+        if (checkmark_b.activeInHierarchy)
+        {
+            StartCoroutine(Newque2());
+        }
     }
 
+    IEnumerator Newque()
+    {
+        yield return new WaitForSeconds(2f);
+        que1.SetActive(false);
+        que2.SetActive(true);
+        que2_a.Play();
+
+    }
+    IEnumerator Newque2()
+    {
+        yield return new WaitForSeconds(2f);
+        que2.SetActive(false);
+
+    }
     IEnumerator ActivateQue1WithDelay()
     {
         yield return new WaitForSeconds(2f);
