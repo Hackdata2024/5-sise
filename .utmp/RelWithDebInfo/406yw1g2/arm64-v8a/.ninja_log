@@ -1,0 +1,9 @@
+# ninja log v5
+32	1578	7279027708250656	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	530ee454f132b6aa
+19	1623	7279027708870867	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	40e12085e599e54b
+0	1673	7279027709355957	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2a403643c169629
+40	1721	7279027709857292	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	695d5f87b2b07cec
+7	1786	7279027710468624	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	eca6ae319781eaa3
+25	2082	7279027713324520	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	2862dbeab8e8d6bf
+12	2204	7279027714656119	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c0421700fdb50550
+2205	2403	7279027716154661	C:/Users/tanee/Mental Health VR/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/406yw1g2/obj/arm64-v8a/libgame.so	b2d0b64cce3db096
