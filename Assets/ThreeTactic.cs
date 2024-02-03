@@ -19,7 +19,6 @@ public class ThreeTactic : MonoBehaviour
 
     public stage currentStage;
 
-    private DeepBreathing deepBreathing;
 
     private int touchObjectCount, soundObjectCount, smellObjectCount = 0;
 
@@ -36,7 +35,6 @@ public class ThreeTactic : MonoBehaviour
         currentStage = stage.Touch;
         intro.Play();
         Invoke("enableTouchObjects", 9);
-        deepBreathing = GetComponent<DeepBreathing>();
     }
 
     void Update()
@@ -96,7 +94,7 @@ public class ThreeTactic : MonoBehaviour
                 break;
 
             case stage.Finish:
-                complete.Play();
+                //complete.Play();
                 this.enabled = false;
                 //enable next strategy script
                 //disable this script

@@ -27,7 +27,7 @@ public class BreathingUI : MonoBehaviour
     void Start()
     {
         
-        //completeTactic.Play();
+        completeTactic.Play();
         currentStage = breatheStages.instruction;
         Invoke("playInstructionVoiceover", 13);
         Invoke("startRepetition", 14);
