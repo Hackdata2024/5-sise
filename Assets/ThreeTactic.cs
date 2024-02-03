@@ -79,9 +79,9 @@ public class ThreeTactic : MonoBehaviour
                     SmellObjects[i].transform.Find("Point Light").gameObject.SetActive(true);
                 }
                 //disable the lights if smell stage is completed
-                if (soundObjectCount >= 3){
+                if (smellObjectCount >= 3){
 
-                    for (int i = 0; i < SoundObjects.Count; i++)
+                    for (int i = 0; i < SmellObjects.Count; i++)
                     {
                         SmellObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
                     }
