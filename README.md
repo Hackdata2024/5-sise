@@ -23,12 +23,13 @@ The course will cover a wide range of first aid techniques, including panic atta
 The VR environment will simulate various emergency situations which a person might face in day to day life, such as panic attacks, electric shock, suffocation or blocked airways and household mishaps, to help users develop the necessary skills and confidence to respond effectively in real-life emergencies.
 The project will also incorporate a certificate of completion which will be validated by certain organizations and universities that we will collaborate with. 
 
-4. team members
+4. Team Members
 Taneesha Kalra
-Kartik
-Gauraang
-Maanya
-5. features in simulation
+Kartik Singh
+Gauraang Goel
+Maanya Johri
+
+6. features in simulation
 
 Interactive Scenarios: The simulation could present various interactive scenarios where trainees are required to provide first aid in different emergency situations such as cardiac arrest, choking, or severe bleeding.
 
@@ -45,15 +46,14 @@ Adaptive Scenarios: The VR training could adapt the scenarios based on the train
 Instructional Guidance: The simulation could offer instructional guidance and step-by-step demonstrations of first aid techniques to ensure trainees understand and apply the correct procedures.
 
 
-6. attach link to website:
-	
-	https://maanya21csu230.wixsite.com/vrpanacea
+6. Attach link to website: https://maanya21csu230.wixsite.com/vrpanacea
+   Link of google drive with the project apk: https://drive.google.com/drive/folders/1Um9y5i8w7tq-OEbsdSAEUggPFdBq5use
 
 
 
 
 
-Explain code core-logic,functionality
+7.Explain code core-logic,functionality
 
 (I) XR Interaction Toolkit (VR functionality)
 
@@ -86,10 +86,7 @@ Version control information: Details related to managing changes and updates to 
 
 
 
-
-
-
-Team mates details-skills,backgrounds
+8.Team mates details-skills,backgrounds
 
 Taneesha Kalra : 
 College Name: The Northcap University
