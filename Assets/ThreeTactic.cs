@@ -17,23 +17,27 @@ public class ThreeTactic : MonoBehaviour
 
     public AudioSource intro;
 
-    private stage currentStage;
+    public stage currentStage;
 
-    private DeepBreathing deepBreathing;
 
     private int touchObjectCount, soundObjectCount, smellObjectCount = 0;
+
+    private ThreeTacticFinish tacticFinish;
 
     public AudioSource selectObject;
     public AudioSource barrelSound;
     public AudioSource bottleSound;
     public AudioSource skeletonSound;
 
+    public AudioSource recognizeSounds;
+    public AudioSource recognizeSmells;
+    public AudioSource complete;
     void Start()
     {
+        tacticFinish = GetComponent<ThreeTacticFinish>();
         currentStage = stage.Touch;
         intro.Play();
         Invoke("enableTouchObjects", 9);
-        deepBreathing = GetComponent<DeepBreathing>();
     }
 
     void Update()
@@ -46,9 +50,9 @@ public class ThreeTactic : MonoBehaviour
                 {
                     for (int i = 0; i < SoundObjects.Count; i++)
                     {
-                        TouchObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
+                        TouchObjects[i].transform.Find("UI").gameObject.SetActive(false);
                     }
-
+                    recognizeSounds.Play();
                     currentStage = stage.Sound;
                 }
                 break;
@@ -57,17 +61,17 @@ public class ThreeTactic : MonoBehaviour
                 //enable the sound object lights
                 for (int i = 0; i < SoundObjects.Count; i++)
                 {
-                    SoundObjects[i].transform.Find("Point Light").gameObject.SetActive(true);
+                    SoundObjects[i].transform.Find("UI").gameObject.SetActive(true);
                 }
                 //disable the lights if sound stage is completed
-                if (soundObjectCount >= 3)
+                if (soundObjectCount == 3)
                 {
 
                     for (int i = 0; i < SoundObjects.Count; i++)
                     {
-                        SoundObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
+                        SoundObjects[i].transform.Find("UI").gameObject.SetActive(false);
                     }
-
+                    recognizeSmells.Play();
                     currentStage = stage.Smell;
                 }
                 break;
@@ -76,23 +80,27 @@ public class ThreeTactic : MonoBehaviour
                 //enable the smell objects lights
                 for (int i = 0; i < SmellObjects.Count; i++)
                 {
-                    SmellObjects[i].transform.Find("Point Light").gameObject.SetActive(true);
+                    SmellObjects[i].transform.Find("UI").gameObject.SetActive(true);
                 }
                 //disable the lights if smell stage is completed
-                if (soundObjectCount >= 3){
+                if (smellObjectCount == 3){
 
-                    for (int i = 0; i < SoundObjects.Count; i++)
+                    for (int i = 0; i < SmellObjects.Count; i++)
                     {
-                        SmellObjects[i].transform.Find("Point Light").gameObject.SetActive(false);
+                        SmellObjects[i].transform.Find("UI").gameObject.SetActive(false);
+                        Debug.Log("disable UI");
                     }
+                    
                     currentStage = stage.Finish;
                 }
+
 
                 break;
 
             case stage.Finish:
-                deepBreathing.enabled = true;
-                this.enabled = false;
+                //complete.Play();
+                tacticFinish.enabled = true;
+                gameObject.GetComponent<ThreeTactic>().enabled = false;
                 //enable next strategy script
                 //disable this script
                 break;
@@ -104,7 +112,7 @@ public class ThreeTactic : MonoBehaviour
     {
         for (int i = 0; i < TouchObjects.Count; i++)
         {
-            TouchObjects[i].transform.Find("Point Light").gameObject.SetActive(true);
+            TouchObjects[i].transform.Find("UI").gameObject.SetActive(true);
         }
     }
 

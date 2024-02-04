@@ -48,7 +48,6 @@ public class WaypointFollower : MonoBehaviour
 
     void moveToWaypoints(List<Transform> listt)
     {
-        Debug.Log(Vector3.Distance(Player.transform.position, listt[j].position));
         if (Vector3.Distance(Player.transform.position, listt[j].position) > 1f)
         {
             moveDirection = listt[j].position - Player.transform.position;
