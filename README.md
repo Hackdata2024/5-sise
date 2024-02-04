@@ -48,12 +48,9 @@ Instructional Guidance: The simulation could offer instructional guidance and st
 
 6. Attach link to website: https://maanya21csu230.wixsite.com/vrpanacea
    Link of google drive with the project apk: https://drive.google.com/drive/folders/1Um9y5i8w7tq-OEbsdSAEUggPFdBq5use
+   
 
-
-
-
-
-7.Explain code core-logic,functionality
+8. Explain code core-logic,functionality
 
 (I) XR Interaction Toolkit (VR functionality)
 
@@ -82,7 +79,6 @@ Plugins and extensions: These provide extra features, like making the game look 
 Testing code: Scripts for testing the game to ensure everything works as it should.
 
 Version control information: Details related to managing changes and updates to the game's code and assets.
-
 
 
 
