@@ -94,13 +94,13 @@ Gauraang Goel :
 College Name: The Northcap University
 College Info: 3rd Year B-Tech CSE Student specializing in AR/VR & Game Tech.
 Skills: Unity Development, Photoshop, 3D Modeling(3Ds Max), Java, python and C# programming Languages.
-Contribution: Asthma Attack Scene development and  Scene UI Designer. 
+Contribution: Asthma Attack Scene development and  Project Scenes UI Designer. 
 
 Maanya Johri : 
 College Name: The Northcap University
 College Info: 3rd Year B-Tech CSE Student specializing in Data Science.
 Skills:  Unity Development, Microsoft Azure, Gen AI, Java,python, R programming Languages.
-Contribution: Website Designer, UI Designer and Documentation
+Contribution: Website Designer, UI Designer and Documentation.
 
 Kartik Singh : 
 College Name: The Northcap University
