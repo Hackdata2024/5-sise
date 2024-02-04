@@ -23,7 +23,11 @@ The course will cover a wide range of first aid techniques, including panic atta
 The VR environment will simulate various emergency situations which a person might face in day to day life, such as panic attacks, electric shock, suffocation or blocked airways and household mishaps, to help users develop the necessary skills and confidence to respond effectively in real-life emergencies.
 The project will also incorporate a certificate of completion which will be validated by certain organizations and universities that we will collaborate with. 
 
-4. Team Members
+
+4. Idea Description
+The project aims to develop a VR-based first aid training program. Trainees will immerse themselves in realistic virtual environments and interact with simulated emergency scenarios, such as cardiac arrest, panic attack, electric shock etc. The VR experience will provide interactive guidance, haptic feedback, and performance evaluation, ensuring trainees learn and practice first aid skills effectively in a safe and controlled virtual environment.
+
+5. Team Members
 Taneesha Kalra
 Kartik Singh
 Gauraang Goel
@@ -46,7 +50,7 @@ Adaptive Scenarios: The VR training could adapt the scenarios based on the train
 Instructional Guidance: The simulation could offer instructional guidance and step-by-step demonstrations of first aid techniques to ensure trainees understand and apply the correct procedures.
 
 
-6. Attach link to website: https://maanya21csu230.wixsite.com/vrpanacea
+7. Attach link to website: https://maanya21csu230.wixsite.com/vrpanacea
    Link of google drive with the project apk: https://drive.google.com/drive/folders/1Um9y5i8w7tq-OEbsdSAEUggPFdBq5use
    
 
