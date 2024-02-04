@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public enum breatheStages
 {
@@ -19,6 +20,8 @@ public class BreathingUI : MonoBehaviour
     public AudioSource inhaleAudio;
     public AudioSource completeAudio;
 
+    public VideoPlayer videoPlayer;
+
     private float timer = 15f;
     private float timerCount = 0f;
     int i = 0;
@@ -30,7 +33,7 @@ public class BreathingUI : MonoBehaviour
         currentStage = breatheStages.instruction;
         //Invoke("playInstructionVoiceover", 13);
         instructionAudio.Play();
-        Invoke("startRepetition", 8);
+        Invoke("startRepetition", 1);
         //Invoke("startRepetition", 12);
     }
 
@@ -52,7 +55,10 @@ public class BreathingUI : MonoBehaviour
                     {
                         timerCount = 0f;
                         i += 1;
-                        inhaleAudio.Play();
+                        //inhaleAudio.Play();
+                        Debug.Log("playing video");
+                        videoPlayer.Stop();
+                        videoPlayer.Play();
                     }
 
                 }
