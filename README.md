@@ -1,4 +1,4 @@
-# readme
+# Readme
  
 1. How to run project:
 
